@@ -1,0 +1,79 @@
+/* 
+   RESPONSIVIDADE
+   Ajustes para que o amor seja visto perfeitamente em qualquer tela.
+*/
+
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-hero: 2.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: var(--font-size-hero);
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item::after {
+        left: 21px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item:nth-child(even)::after {
+        left: 21px;
+    }
+
+    /* Foto no Tablet */
+    .photo-section img {
+        max-width: 80% !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/foto0-mobile.jpg');
+        width: 100%;
+        background-size: cover;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 0 15px;
+    }
+
+    .romantic-text-container p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    /* Foto no Mobile */
+    .photo-section img {
+        max-width: 90% !important; /* Entre 85% e 95% conforme solicitado */
+    }
+}
+

@@ -1,0 +1,60 @@
+/* 
+   ANIMAÇÕES E EFEITOS VISUAIS
+   Aqui definimos a magia e o movimento do site.
+*/
+
+/* Fade In Suave para seções */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Corações flutuantes no fundo */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.heart-particle {
+    position: fixed;
+    bottom: -10px;
+    color: rgba(255, 107, 107, 0.4);
+    font-size: 20px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+    animation: float linear forwards;
+}
+
+/* Pulsação romântica para botões ou destaques */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-romantico:hover {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Efeito Hover nas fotos (Polaroid) */
+.polaroid-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid-effect:hover {
+    transform: rotate(2deg) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
